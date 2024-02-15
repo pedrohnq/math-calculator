@@ -13,4 +13,7 @@ class WelcomePage(BasePage):
             self, text="Derivative", name='calculate_derivative_button', 
             style={"pady": 20, "ipadx": 20}, command = lambda: self.controller.render("CalculateDerivativePage")
         )
-        PrimaryButton(self, text="Integral", name='calculate_integral_button', style={"pady": 20, "ipadx": 30})
+        PrimaryButton(
+            self, text="Integral", name='calculate_integral_button', style={"pady": 20, "ipadx": 30},
+            command = lambda: self.controller.render("CalculateIntegralPage")
+        )
